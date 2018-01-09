@@ -10,17 +10,18 @@ var t = prompt("Calculate for How Many Years?","");
 var startNum = parseInt(startSum, 10);
 var rNum = parseInt(r, 10);
 var tNum = parseInt(t, 10);
-console.log(startNum,typeof startNum,rNum,typeof rNum,tNum,typeof tNum);
+console.log("startsum:",startNum,typeof startNum,"rate:", rNum,typeof rNum, "time:",tNum,typeof tNum);
 
 //convert the rate input to a decimal for arithmetic:
 var rDec = rNum / 100;
-console.log(rDec,typeof rDec);
+console.log("converted rate:", rDec,typeof rDec);
 
 //create array to loop through for calculations
  var a = [];
  //put starting value into the first key of the array index
  a.push(startNum);
- console.log(a);
+ console.log("array a with start value:",a);
+ console.log("current time value:",tNum);
 
 
 //variables to use for calculation: startNum (starting amount), rDec (rate in decimal), tNum (), a (array for return values)
@@ -32,16 +33,30 @@ function calculate(startNum){
        for (i = 0; i < tNum; i++) {
 
           var x = a[i] + (a[i] * rDec);
-          //strip number to 2 decimal values:
+
           a.push(x);
+
         }
+        console.log("length of array a:",a.length);
+
+        //when this is done, a[i] will have 1 more key than the tNum the user entered for number of years (the starting amount + 1 amount for each year of interest earned; 1 + tNum)
+
+       //create new array to hold sum strings with 2 decimals.  Note: this is created outside of the for loop so that it is not recreated each time, erasing the previously inserted values.
+
+        var cleanNum = [];
 
         for (i = 0; i < a.length; i++){
-             a[i].toFixed(2);
-             console.log(a[i]);
+            //create variable for each index to use with toFixed function:
+             var num = a[i];
+            //convert each number in index to a string with 2 decimals:
+             var y = num.toFixed(2);
+            //push each value into the new array (cleanNum) to hold final sums:
+            cleanNum.push(y);
+            
         }
+        console.log("array with cleanNum values:",cleanNum);
 
 //print out the results from the array for each Years
 
-document.getElementById("printout").innerHTML = a;
+document.getElementById("printout").innerHTML = cleanNum;
 }
