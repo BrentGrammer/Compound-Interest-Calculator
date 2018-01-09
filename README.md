@@ -9,6 +9,6 @@ The project is still being worked on.
 
 - creating a better user interface with styling.
 
-##### Problems Solved and Tasks Completed:
+## Problems Solved and Tasks Completed:
 
 - reducing the decimal places of results to 2 places (done by using toFixed function-this has been accomplished)
