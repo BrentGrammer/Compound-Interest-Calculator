@@ -20,8 +20,9 @@ console.log("converted rate:", rDec,typeof rDec);
  var a = [];
  //put starting value into the first key of the array index
  a.push(startNum);
- console.log("array a with start value:",a);
- console.log("current time value:",tNum);
+
+ console.log("array a with start value:",a);  //for debugging
+ console.log("current time value:",tNum);     //for debugging
 
 
 //variables to use for calculation: startNum (starting amount), rDec (rate in decimal), tNum (), a (array for return values)
@@ -35,7 +36,7 @@ function calculate() {
            a.push(x);
        }
     
-        console.log("length of array a:",a.length);
+        console.log("length of array a:",a.length);  //for debugging.
 
        //when this is done, a[i] will have 1 more key than the tNum the user entered for number of years (the starting amount + 1 amount for each year of interest earned; 1 + tNum)
 
@@ -52,7 +53,8 @@ function calculate() {
             cleanNum.push(y);
             
         }
-        console.log("array with cleanNum values:",cleanNum);
+    
+        console.log("array with cleanNum values:",cleanNum); //for debugging.
 
 //print out the results from the array for each year.
 
