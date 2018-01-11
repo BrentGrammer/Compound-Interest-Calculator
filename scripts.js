@@ -28,7 +28,7 @@ console.log("converted rate:", rDec,typeof rDec);
 //note: the starting value entered by user (startSum/startNum) is already in the first key index of the array 'a' for starting the caclculations
 
 //the following calculate function runs when user clicks calculate button:
-function calculate(startNum){
+function calculate(startNum) {
 
        for (i = 0; i < tNum; i++) {
 
@@ -39,13 +39,13 @@ function calculate(startNum){
         }
         console.log("length of array a:",a.length);
 
-        //when this is done, a[i] will have 1 more key than the tNum the user entered for number of years (the starting amount + 1 amount for each year of interest earned; 1 + tNum)
+       //when this is done, a[i] will have 1 more key than the tNum the user entered for number of years (the starting amount + 1 amount for each year of interest earned; 1 + tNum)
 
        //create new array to hold sum strings with 2 decimals.  Note: this is created outside of the for loop so that it is not recreated each time, erasing the previously inserted values.
 
         var cleanNum = [];
 
-        for (i = 0; i < a.length; i++){
+        for (i = 0; i < a.length; i++) {
             //create variable for each index to use with toFixed function:
              var num = a[i];
             //convert each number in index to a string with 2 decimals:
