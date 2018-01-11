@@ -28,15 +28,13 @@ console.log("converted rate:", rDec,typeof rDec);
 //note: the starting value entered by user (startSum/startNum) is already in the first key index of the array 'a' for starting the caclculations
 
 //the following calculate function runs when user clicks calculate button:
-function calculate(startNum) {
+function calculate() {
 
        for (i = 0; i < tNum; i++) {
-
-          var x = a[i] + (a[i] * rDec);
-
-          a.push(x);
-
-        }
+           var x = a[i] + (a[i] * rDec);
+           a.push(x);
+       }
+    
         console.log("length of array a:",a.length);
 
        //when this is done, a[i] will have 1 more key than the tNum the user entered for number of years (the starting amount + 1 amount for each year of interest earned; 1 + tNum)
@@ -56,7 +54,7 @@ function calculate(startNum) {
         }
         console.log("array with cleanNum values:",cleanNum);
 
-//print out the results from the array for each Years
+//print out the results from the array for each year.
 
 document.getElementById("printout").innerHTML = cleanNum;
 }
