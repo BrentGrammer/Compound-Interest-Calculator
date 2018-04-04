@@ -14,4 +14,4 @@ The project is still being worked on.
 
 ## Problems Solved and Tasks Completed:
 
-- reducing the decimal places of results to 2 places (done by using toFixed function-this has been accomplished)
+- formatting results to two decimal places  
